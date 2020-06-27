@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  {{!-- CSS STYLING --}}
+    {{!-- CSS STYLING --}}
     <style>
       .*{
         margin:0px;
@@ -26,63 +26,25 @@
 
       }
       .container img{
-        width: 8%;
-        float: left;
+    width: 75%;
+    /* float: left; */
+    align-self: center;
 
       }
-      .container button{
-      
-        float: right;
-        margin-top: 40px;
-        margin-right: 10%;
-        width: 15%;
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 41px;
-        color: #FFFFFF;
-        background: #FADC9C;
-        border-radius: 10px;
-        border: none;
-      }
-
-      .container h1{
-          float: left;
-          font-weight: 900;
-          padding-left: 25%;
-      }
-        table{
-        
-          left: 104px;
-          top: 231px;
-        }
-
-        thead{
-        
-          background: #fe4e30;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-          border-radius: 20px 20px 0px 0px;
-
-          font-family: Airbnb Cereal App;
-          font-size: 30px;
-          line-height: 39px;
-          text-align: center;
-
-          color: #FFFFFF;
-        }
-
-        tbody{
-        
-          background: #FFFFFF;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-          border-radius: 0px 0px 20px 20px;
-          font-family: Airbnb Cereal App;
-          font-size: 30px;
-          line-height: 39px;
-
-          color: #000000;
-        }
+      .navbar h1 {
+    text-align: center;
+    font-size: 60px;
+    }
+    .card{
+      padding: 20px;
+    margin-right: 30px;
+    }
+    .jawaban a {
+    font-size: 150%;
+    border: solid 2px red;
+    margin-right: 20px;
+    padding: 20px;
+    }
 
         #icon img {
             width: 75px;
@@ -94,6 +56,22 @@
         p {
             font-size: large;
             font-weight: 600;
+        }
+        
+        .card.col-sm-2 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        a#tombol-kabupaten {
+            margin-left: 43%;
+            margin-right: 43%;
+        }
+
+        .card.col-sm-3 {
+            margin-left: 35px;
+            text-align: center;
         }
 {{!-- UNTUK MODAL --}}
 h5#exampleModalLabel {
@@ -132,6 +110,10 @@ select option{
 
 .form-group {
     margin: 0px;
+}
+
+.card.col-sm-2 {
+    text-align: center;
 }
 
     </style>
