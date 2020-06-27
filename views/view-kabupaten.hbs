@@ -38,7 +38,12 @@
     .card{
       padding: 20px;
     margin-right: 30px;
+        text-align: center;
     }
+    .card.col-sm {
+          align-content: end;
+          width: 35em;
+      }
     .jawaban a {
     font-size: 150%;
     border: solid 2px red;
@@ -72,6 +77,11 @@
         .card.col-sm-3 {
             margin-left: 35px;
             text-align: center;
+        }
+        button#dropdownMenuButton {
+            margin-bottom: 20px;
+            margin-left: 45%;
+            margin-top: 20px;
         }
 {{!-- UNTUK MODAL --}}
 h5#exampleModalLabel {
@@ -119,17 +129,35 @@ select option{
     </style>
 </head>
 <body>
-
+  <div class="container">
   <nav class="navbar navbar-light bg-light">
     <a class="navbar" href="#">
+      <div class="container">
       <h1>Provinsi & Kabupaten</h1>
+      </div>
+      <div class="container">
+    <div class="card col-sm">      
      <button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">Add Provinsi</button>
+    </div>
+    <div class="card col-sm">
      <button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd1">Add Kabupaten</button>
+    </div>
+     <div>
     </a>
   </nav>
-  <a href='/provinsi_tb'>Jawaban untuk no 4 A<a>
-  <a href='/kabupaten_tb'>Jawaban untuk no 4 B<a>
-  <a href='/pulau-tertentu'>Jawaban untuk no 4 c<a>
+    <div class="card col-sm-3">
+
+  <a href='/provinsi_tb'>Jawaban untuk no 4 A</a>
+    </div>
+    <div class="card col-sm-3">
+
+  <a href='/kabupaten_tb'>Jawaban untuk no 4 B</a>
+    </div>
+    <div class="card col-sm-3">
+
+  <a href='/pulau-tertentu'>Jawaban untuk no 4 c</a>
+    </div>
+
   
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -141,6 +169,7 @@ select option{
       <a class="dropdown-item" href="#">Something else here</a>
     </div>
   </div>
+ </div> 
 
 <div class="container">
   <div class="row">
