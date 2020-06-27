@@ -8,20 +8,56 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+{{!-- css styling --}}
+<style>
+h1 {
+    font-size: 7em;
+    text-align: center;
+    font-family: fantasy;
+}
+a.btn.btn-sm.btn-info.edit {
+    width: 30%;
+    margin-right: 10%;
+    margin-left: 10%;
+    float:left;
+    font-size: 2em;
+}
+a.btn.btn-sm.btn-danger.delete {
+    width: 30%;
+    margin-right: 10%;
+    margin-left: 10%;
+    float: right;
+    font-size: 2em;
+}
+
+a#kembali {
+    margin-left: 41%;
+    border: solid 2px green;
+    margin-right: 41%;
+    font-size: 4em;
+    background: aquamarine;
+}
+img {
+    width: 50em;
+    margin-left: 19%;
+}
+</style>
 <body>
-<div id="content">
+<div class="container" id="content">
       {{#each results}}
     <h1>{{ nama }}</h1>
     <h1>{{diresmikan}}</h1>
     <h1>{{pulau}}</h1>
     <img src={{photo}}>
+    <div>
     <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ id }}" data-nama="{{ nama }}" data-diresmikan="{{ diresmikan }}" data-photo="{{ photo }}" data-pulau="{{ pulau }}">Edit</a>
       <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ id }} ">Delete</a>
+    </div>
     {{/each}}
 </div>
 
 <div class="container">
-<a href=#>Daftar Kabupaten Kota di sini</a>
+<a id="kembali" href="/">Kembali</a>
   </div>
 
  <!-- Modal Update provinsi-->
