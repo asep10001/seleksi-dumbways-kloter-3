@@ -9,46 +9,46 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div id="content">
-      {{#each results}}
-    <h1>{{ nama }}</h1>
-    <h1>{{diresmikan}}</h1>
-    <h1>{{pulau}}</h1>
+<div id="content1">
+      {{#each results2}}
+    <h1>{{ Nama }}</h1>
+    <h1>{{Diresmikan}}</h1>
+    <h1>{{Provinsi_id}}</h1>
     <img src={{photo}}>
-    <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ id }}" data-nama="{{ nama }}" data-diresmikan="{{ diresmikan }}" data-photo="{{ photo }}" data-pulau="{{ pulau }}">Edit</a>
+    <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ id }}" data-nama="{{ Nama }}" data-diresmikan="{{ Diresmikan }}" data-photo="{{ photo }}" data-provinsi_id="{{ Provinsi_id }}">Edit</a>
       <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ id }} ">Delete</a>
     {{/each}}
 </div>
 
 <div class="container">
-<a href=#>Daftar Kabupaten Kota di sini</a>
+<a href='/kabupaten-first'>kembali ke halaman sebelumnya</a>
   </div>
 
- <!-- Modal Update provinsi-->
+ <!-- Modal Update kabupaten-->
 
-   <form action="/update" method="post">
-       <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <form action="/update-kabupaten" method="post">
+       <div class="modal fade" id="EditModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Edit Provinsi</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Edit Kabupaten</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body"> 
             <div class="form-group">
                    <input type="text" name="nama" class="nama form-control" placeholder="Nama Provinsi" required>
                </div>
  
                <div class="form-group">
-                   <input type="text" name="diresmikan" class="diresmikan form-control" placeholder="diresmikan" required>
+                   <input type="text" name="Diresmikan" class="diresmikan form-control" placeholder="diresmikan" required>
                </div>
                <div class="form-group">
                    <input type="text" name="photo" class="photo form-control" placeholder="photo" required>
                </div>
                <div class="form-group">
-                   <input type="text" name="pulau" class="pulau form-control" placeholder="pulau" required>
+                   <input type="text" name="provinsi_id" class="provinsi_id form-control" placeholder="ID Provinsi" required>
                </div>
             </div>
             <div class="modal-footer">
@@ -61,20 +61,20 @@
        </div>
   </form>
 
-     <!-- Modal Delete provinsi-->
-      <form id="add-row-form" action="/delete" method="post">
-         <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     <!-- Modal Delete kabupaten-->
+      <form id="add-row-form" action="/delete-kabupaten" method="post">
+         <div class="modal fade" id="DeleteModal  " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                <div class="modal-content">
                    <div class="modal-header">
-              <h5 class="modal-title" id="myModalLabel">Delete Provinsi</h5>
+              <h5 class="modal-title" id="myModalLabel">Delete Kabupaten</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                    </div>
                    <div class="modal-body">
-                      <strong>Anda yakin mau menghapus provinsi ini?</strong>
+                      <strong>Anda yakin mau menghapus kabupaten ini?</strong>
                    </div>
                    <div class="modal-footer">
-                        <input type="hidden" name="id" class="form-control provinsi_tb" required>
+                        <input type="hidden" name="id" class="form-control kabupaten_tb" required>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-success">Delete</button>
                    </div>
@@ -87,25 +87,23 @@
 <script>
     $(document).ready(function(){
             //tampilkan data ke modal untuk edit
-      $('#content').on('click','.edit',function(){
+      $('#content1').on('click','.edit',function(){
         var nama = $(this).data('nama');
         var diresmikan = $(this).data('diresmikan');
         var photo = $(this).data('photo');
-        var pulau = $(this).data('pulau');
+        var provinsi_id = $(this).data('provinsi_id');
         var id = $(this).data('id');
-        $('#EditModal').modal('show');
+        $('#EditModal1').modal('show');
         $('.id').val(id);
         $('.nama').val(nama);
         $('.diresmikan').val(diresmikan);
         $('.photo').val(photo);
-        $('.pulau').val(pulau);
-        $('.id').val(id);
+        $('.provinsi_id').val(provinsi_id);
       });
             //tampilkan modal hapus record
-            $('#content').on('click','.delete',function(){
-        var id = $(this).data('id');
+            $('#content1').on('click','.delete',    function(){var id = $(this).data('id');
         $('#DeleteModal').modal('show');
-        $('.provinsi_tb').val(id);
+        $('.kabupaten_tb').val(id);
       });
  
     });

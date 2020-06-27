@@ -26,25 +26,63 @@
 
       }
       .container img{
-    width: 75%;
-    /* float: left; */
-    align-self: center;
+        width: 8%;
+        float: left;
 
       }
-      .navbar h1 {
-    text-align: center;
-    font-size: 60px;
-    }
-    .card{
-      padding: 20px;
-    margin-right: 30px;
-    }
-    .jawaban a {
-    font-size: 150%;
-    border: solid 2px red;
-    margin-right: 20px;
-    padding: 20px;
-    }
+      .container button{
+      
+        float: right;
+        margin-top: 40px;
+        margin-right: 10%;
+        width: 15%;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+        color: #FFFFFF;
+        background: #FADC9C;
+        border-radius: 10px;
+        border: none;
+      }
+
+      .container h1{
+          float: left;
+          font-weight: 900;
+          padding-left: 25%;
+      }
+        table{
+        
+          left: 104px;
+          top: 231px;
+        }
+
+        thead{
+        
+          background: #fe4e30;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          border-radius: 20px 20px 0px 0px;
+
+          font-family: Airbnb Cereal App;
+          font-size: 30px;
+          line-height: 39px;
+          text-align: center;
+
+          color: #FFFFFF;
+        }
+
+        tbody{
+        
+          background: #FFFFFF;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          border-radius: 0px 0px 20px 20px;
+          font-family: Airbnb Cereal App;
+          font-size: 30px;
+          line-height: 39px;
+
+          color: #000000;
+        }
 
         #icon img {
             width: 75px;
@@ -56,12 +94,6 @@
         p {
             font-size: large;
             font-weight: 600;
-        }
-        
-        .card.col-sm-2 {
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
         }
 {{!-- UNTUK MODAL --}}
 h5#exampleModalLabel {
@@ -102,28 +134,22 @@ select option{
     margin: 0px;
 }
 
-.card.col-sm-2 {
-    text-align: center;
-}
-
     </style>
 </head>
 <body>
 
   <nav class="navbar navbar-light bg-light">
-    <div class="container">
     <a class="navbar" href="#">
       <h1>Provinsi & Kabupaten</h1>
-      
-      <div class="card col-sm">
      <button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">Add Provinsi</button>
-      </div>
-      <div class="card col-sm">
-     <button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">Add Kabupaten</button>
-     </div>
-     
-
-    <div class="dropdown">
+     <button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd1">Add Kabupaten</button>
+    </a>
+  </nav>
+  <a href='/provinsi_tb'>Jawaban untuk no 4 A<a>
+  <a href='/kabupaten_tb'>Jawaban untuk no 4 B<a>
+  <a href='/pulau-tertentu'>Jawaban untuk no 4 c<a>
+  
+  <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Dropdown button
     </button>
@@ -131,68 +157,47 @@ select option{
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
       <a class="dropdown-item" href="#">Something else here</a>
+    </div>
   </div>
-    </div>
-     
-    </div>
-  </nav>
-  <div class="container jawaban">
-    <div class="card col-sm-3">
-      <a href='/provinsi_tb'>Jawaban untuk no 4 A</a>
-    </div>
-    <div class="card col-sm-3">
-      <a href='/kabupaten_tb'>Jawaban untuk no 4 B</a>
-    </div>
-    <div class="card col-sm-3">
-      <a href='/pulau-tertentu'>Jawaban untuk no 4 c</a>
-    </div>
-
-
-
-  </div>
-  
 
 <div class="container">
   <div class="row">
-          {{#each results}}
-    <div class="card col-sm-2">
+          {{#each results2}}
+    <div class="card col-sm">
       <img src="{{ photo }}">
-        <h3>{{ nama }}</h3>
-        <p>{{ diresmikan }}</p>
-        <a href="/provinsi/{{ id }}">Detail</button>
+        <h3>{{ Nama }}</h3>
+        <p>{{ Diresmikan }}</p>
+        <a href="/kabupaten/{{ id }}">Detail</button>
     </div>
     
     {{/each}}
   </div>
 
 
-       <a class="btn btn-success" href="/kabupaten-first"><button class="btn">Lihat Seluruh Kabupaten</button></a>
-
-
-      <!-- Modal Add provinsi-->
-      <form action="/add_provinsi" method="post">
-        <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- Modal Add kabupaten-->
+      <form action="/add_kabupaten" method="post">
+        <div class="modal fade" id="myModalAdd1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <div class="modal-dialog" role="document">
            <div class="modal-content">
              <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">Add Provinsi</h5>
+               <h5 class="modal-title" id="exampleModalLabel">Add Kabupaten</h5>
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
                </button>
              </div>
              <div class="modal-body">       
                <div class="form-group">
-                   <input type="text" name="nama" class="form-control" placeholder="Nama Provinsi" required>
+                   <input type="text" name="Nama" class="form-control" placeholder="Nama Kabupaten" required>
                </div>
  
                <div class="form-group">
-                   <input type="text" name="diresmikan" class="form-control" placeholder="diresmikan tanggal" required>
+                   <input type="text" name="Diresmikan" class="form-control" placeholder="diresmikan tanggal" required>
                </div>
                <div class="form-group">
                    <input type="text" name="photo" class="form-control" placeholder="url photo" required>
                </div>
                <div class="form-group">
-                   <input type="text" name="pulau" class="form-control" placeholder="pulau" required>
+                   <input type="number" name="provinsi_id" class="form-control" placeholder="id provinsi" required>
                </div>
              </div>
              <div class="modal-footer">
