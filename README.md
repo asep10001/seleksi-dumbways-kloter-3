@@ -1,38 +1,38 @@
-# seleksi-dumbways-kloter-3
-ini merupakan jawaban ASEP AGUS HERI HERMAWAN
-==================JAWABAN NO 1 SD 3 =========
-no satu sampai dengan 3 saya menjawabnya di file terpisah
-DENGAN NAMA FILE
-jawaban1.js
-jawaban2.js
-jawaban3.js
+# seleksi-dumbways-kloter-3<br>
+ini merupakan jawaban ASEP AGUS HERI HERMAWAN<br>
+==================JAWABAN NO 1 SD 3 =========<br>
+no satu sampai dengan 3 saya menjawabnya di file terpisah<br>
+DENGAN NAMA FILE<br>
+jawaban1.js<br>
+jawaban2.js<br>
+jawaban3.js<br>
 
-====================STACK===================
-saya menggunakan stack MEN (MySQL Express Node) untuk menjawab no 4
-KELEBIHAN APLIKASI INI ADALAH
-database yang digunakan adalah database external gratis dari
-myremotesql.com 
-sehingga bisa di running di dalam IDE repl.it dan bisa di pakai layaknya web pada umumnya
+====================STACK===================<br>
+saya menggunakan stack MEN (MySQL Express Node) untuk menjawab no 4<br>
+KELEBIHAN APLIKASI INI ADALAH<br>
+database yang digunakan adalah database external gratis dari<br>
+myremotesql.com <br>
+sehingga bisa di running di dalam IDE repl.it dan bisa di pakai layaknya web pada umumnya<br>
 
-====================SOFTWARE ==============
+====================SOFTWARE ==============<br>
 
-TEXT EDITOR: SUBLIME TEXT;
-IDE ONLINE: repl.it
-DATABASE: remotemysql.com
-
-
-=============================================================================================
-untuk membuat web aplikasi CRUD
-
-soal no 4 saya sudah menyiapkan jawaban yang dapat di run di repl.it
-
-silahkan klik link dibawah dan klik run di repl.it
-
-terdapat tombol fullscreen di pojok kanan atas pada layar window untuk memaksimalkan jawaban yang dapat di buka di jendela browser yang baru
+TEXT EDITOR: SUBLIME TEXT;<br>
+IDE ONLINE: repl.it<br>
+DATABASE: remotemysql.com<br>
 
 
-https://repl.it/@AsepAgus/soalNo3Dumbways
+=============================================================================================<br>
+untuk membuat web aplikasi CRUD<br>
 
+soal no 4 saya sudah menyiapkan jawaban yang dapat di run di repl.it<br>
+
+silahkan klik link dibawah dan klik run di repl.it<br>
+
+terdapat tombol fullscreen di pojok kanan atas pada layar window untuk memaksimalkan jawaban yang dapat di buka di jendela browser yang baru<br>
+
+<br>
+https://repl.it/@AsepAgus/soalNo3Dumbways<br>
+<br>
 
 
 //CREATE 
