@@ -19,11 +19,34 @@
       .*{
         margin:0px;
         padding:0px;
+        background-color:#000000;
+      }
+      .container {
+            background-color: black;
+            width:100%;
+        }
+      p{
+            font-size: large;
+        font-weight: 600;
+        color: 00a4c9;
+      }
+
+      button#dropdownMenuButton {
+          width: 40%;
+          
+      }
+      body {
+          background-color: #000000;
       }
       .header{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         width: auto;
 
+      }
+      .btn:not(:disabled):not(.disabled) {
+          cursor: pointer;
+          background: #00b2d9;
+          color: #000;
       }
       .container img{
     width: 75%;
@@ -38,13 +61,23 @@
     .card{
       padding: 20px;
     margin-right: 30px;
+    border: solid 2px #006f89;
+    background-color: #000;
     }
     .jawaban a {
     font-size: 150%;
     border: solid 2px red;
     margin-right: 20px;
     padding: 20px;
+    background-color: #00a4c9;
+    color: black;
     }
+
+    button {
+          background-color: 00b2d9;
+          border-radius: 6px;
+          width: 100%;
+      }
 
         #icon img {
             width: 75px;
@@ -56,6 +89,10 @@
         p {
             font-size: large;
             font-weight: 600;
+        }
+
+        .card.col-sm {
+            border: none;
         }
         
         .card.col-sm-2 {
@@ -73,6 +110,13 @@
         .card.col-sm-3 {
             margin-left: 35px;
             text-align: center;
+            border: none;
+        }
+
+        .h3, h3 {
+            font-size: 24px;
+            color: 00a4c9;
+            font-weight: 900;
         }
 {{!-- UNTUK MODAL --}}
 h5#exampleModalLabel {
@@ -116,12 +160,14 @@ select option{
 .card.col-sm-2 {
     text-align: center;
 }
+.bg-light#atas {
+    background-color: black;
+}
 
     </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-light bg-light">
     <div class="container">
     <a class="navbar" href="#">
       <div class="container">
@@ -148,7 +194,6 @@ select option{
     </div>
      
     </div>
-  </nav>
   <div class="container jawaban">
     <div class="card col-sm-3">
       <a href='/provinsi_tb'>Jawaban untuk no 4 A</a>
@@ -172,7 +217,7 @@ select option{
       <img src="{{ photo }}">
         <h3>{{ nama }}</h3>
         <p>{{ diresmikan }}</p>
-        <a href="/provinsi/{{ id }}">Detail</button>
+        <a href="/provinsi/{{ id }}"><button>Detail</button></a>
     </div>
     
     {{/each}}
