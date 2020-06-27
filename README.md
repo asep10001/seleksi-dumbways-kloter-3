@@ -1,11 +1,38 @@
 # seleksi-dumbways-kloter-3<br>
 ini merupakan jawaban ASEP AGUS HERI HERMAWAN<br>
+====JAWABAN LENGKAP ADA DI=======<br>
+<br>
+https://repl.it/@AsepAgus/soalNo3Dumbways<br>
+<br>
 ==================JAWABAN NO 1 SD 3 =========<br>
 no satu sampai dengan 3 saya menjawabnya di file terpisah<br>
 DENGAN NAMA FILE<br>
 jawaban1.js<br>
 jawaban2.js<br>
 jawaban3.js<br>
+
+==============================JAWABAN NO 4================================<br>
+untuk membuat web aplikasi CRUD<br>
+
+soal no 4 saya sudah menyiapkan jawaban yang dapat di run di repl.it<br>
+
+silahkan klik link dibawah dan klik run di repl.it<br>
+
+terdapat tombol fullscreen di pojok kanan atas pada layar window untuk memaksimalkan jawaban yang dapat di buka di jendela browser yang baru<br>
+
+<br>
+https://repl.it/@AsepAgus/soalNo3Dumbways<br>
+<br>
+
+==============screenshot jawaban===============<br>
+
+saya juga melampirkan screenshot jawaban pada repository dan diletakan di luar agar mudah di temukan<br>
+nama filenya adalah<br>
+jawaban4A.png<br>
+jawaban4B.png<br>
+JAWABAN4C.png<br>
+screenshot post atau mnabah data.png<br>
+
 
 ====================STACK===================<br>
 saya menggunakan stack MEN (MySQL Express Node) untuk menjawab no 4<br>
@@ -21,18 +48,7 @@ IDE ONLINE: repl.it<br>
 DATABASE: remotemysql.com<br>
 
 
-=============================================================================================<br>
-untuk membuat web aplikasi CRUD<br>
 
-soal no 4 saya sudah menyiapkan jawaban yang dapat di run di repl.it<br>
-
-silahkan klik link dibawah dan klik run di repl.it<br>
-
-terdapat tombol fullscreen di pojok kanan atas pada layar window untuk memaksimalkan jawaban yang dapat di buka di jendela browser yang baru<br>
-
-<br>
-https://repl.it/@AsepAgus/soalNo3Dumbways<br>
-<br>
 
 
 //CREATE <br>
