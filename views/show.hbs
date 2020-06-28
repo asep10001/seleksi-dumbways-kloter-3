@@ -47,9 +47,12 @@ img.provinsi {
     margin-left: 19%;
 }
 .h1, h1 {
-    font-size: 36px;
+    font-size: 3em;
     text-align: center;
     font-family: sans-serif;
+    font-family: cursive;
+    font-weight: 900;
+    color: coral;
 }
 
 #isi img {
@@ -69,10 +72,17 @@ div#isi {
     height: auto;
 }
 
+button.btn.btn-primary {
+    padding: 15px 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 </style>
 <body>
 <div class="container" id="content">
-    <h1 class="provinsi">PROVINSI YANG TERDAPAT DI<br>{{results.[1].nama}}</h1>
+    <h1 class="provinsi">KABUPATEN/KOTA YANG TERDAPAT DI<br>{{results.[1].nama}}</h1>
 
     <img class="provinsi" src="{{results.[0].gambar}}">
 
@@ -85,10 +95,9 @@ div#isi {
       <div id="isi" class="card col-sm-5">
     <h1>{{ Nama }}</h1>
     <h1>{{Diresmikan}}</h1>
-    <h1>{{Provinsi_id}}</h1>
     <img src={{pic}}>
     <div>
-    <a href="/kabupaten/{{ id }}"><button>Detail</button></a>
+    <a href="/kabupaten/{{ id }}"><button class='btn btn-primary'>Detail</button></a>
     </div>
   </div>
     {{/each}}
