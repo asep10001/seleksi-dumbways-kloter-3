@@ -104,7 +104,7 @@ div#edit-delete {
 
      <!-- Modal Delete kabupaten-->
       <form id="add-row-form" action="/delete-kabupaten" method="post">
-         <div class="modal fade" id="DeleteModal  " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal fade" id="DeleteModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                <div class="modal-content">
                    <div class="modal-header">
@@ -142,8 +142,8 @@ div#edit-delete {
         $('.provinsi_id').val(provinsi_id);
       });
             //tampilkan modal hapus record
-            $('#content1').on('click','.delete',    function(){var id = $(this).data('id');
-        $('#DeleteModal').modal('show');
+            $('#content1').on('click','.delete', function(){var id = $(this).data('id');
+        $('#DeleteModal1').modal('show');
         $('.kabupaten_tb').val(id);
       });
  
