@@ -88,9 +88,12 @@ app.post("/add_kabupaten", function(req, res) {
 
 //get detail provinsi
 app.get("/provinsi/:id", function(req, res) {
-    var province_id = req.params.id;
-    let sql ='SELECT * FROM provinsi_tb where id = ?';
+    var province_id = parseInt(req.params.id);
+    let sql ='SELECT *, provinsi_tb.photo AS gambar, kabupaten_tb.photo AS pic FROM provinsi_tb JOIN kabupaten_tb ON kabupaten_tb.Provinsi_id = provinsi_tb.id where kabupaten_tb.Provinsi_id = ?';
     let query = db.query(sql, province_id, (error, results) => { if(error) throw error;
+          if(results === []){
+            console.log(`maaf belum ada data ibukota`);
+          }
         res.render("show", {results: results} );
         console.log(results);
     });
