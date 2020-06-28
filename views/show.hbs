@@ -16,35 +16,41 @@
 {{!-- css styling --}}
 <style>
 h1.provinsi {
-    font-size: 7em;
+    font-size: 300%;
     text-align: center;
     font-family: fantasy;
 }
 .provinsi a.btn.btn-sm.btn-info.edit {
-    width: 30%;
-    margin-right: 10%;
-    margin-left: 10%;
-    float:left;
+    width: 50%;
+    /* margin-right: 10%; */
+    /* margin-left: 10%; */
+    /* float: left; */
     font-size: 2em;
 }
 .provinsi a.btn.btn-sm.btn-danger.delete {
-    width: 30%;
-    margin-right: 10%;
-    margin-left: 10%;
-    float: right;
+    width: 50%;
+    /* margin-right: 10%; */
+    /* margin-left: 10%; */
+    /* float: left; */
     font-size: 2em;
 }
 
 a#kembali {
-    margin-left: 41%;
+    width: 50%;
+    /* margin-top: 20px; */
+    align-self: center;
+    /* margin-bottom: 20px; */
+    /* margin: 2% 38%; */
     border: solid 2px green;
-    margin-right: 41%;
-    font-size: 4em;
+    /* margin-right: 41%; */
+    font-size: 100%;
     background: aquamarine;
+    text-align: center;
 }
-img.provinsi {
-    width: 50em;
-    margin-left: 19%;
+.card.col-sm-12 {
+    padding: 0;
+    margin: 0;
+    align-self: center;
 }
 .h1, h1 {
     font-size: 3em;
@@ -56,20 +62,22 @@ img.provinsi {
 }
 
 #isi img {
-    vertical-align: middle;
-    width: 100%;
+    width: 75%;
+    align-self: center;
 }
 
-#isi div {
-    align-self: center;
-    margin: 20px 0 20px;
-}
 
 div#isi {
+    width: 100%;
+    align-self: center;
     text-align: center;
-    padding: 20px;
-    margin: 40px;
+    padding: 2%;
+    margin-bottom: 4%;
     height: auto;
+}
+
+div#isi.card.col-sm-5 {
+    margin: 0 3% 3% 0;
 }
 
 button.btn.btn-primary {
@@ -82,14 +90,16 @@ button.btn.btn-primary {
 </style>
 <body>
 <div class="container" id="content">
-    <h1 class="provinsi">KABUPATEN/KOTA YANG TERDAPAT DI<br>{{results.[1].nama}}</h1>
+      <div id="isi" class="card col-sm-12">
+        <h1 class="provinsi">KABUPATEN/KOTA YANG TERDAPAT DI<br>{{results.[0].nama}}</h1>
 
-    <img class="provinsi" src="{{results.[0].gambar}}">
+        <img class="provinsi" src="{{results.[0].gambar}}">
 
-    <div class="provinsi">
-      <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ results.[0].id }}" data-nama="{{ results.[0].nama }}" data-diresmikan="{{ results.[0].diresmikan }}" data-photo="{{ results.[0].photo }}" data-pulau="{{ results.[0].pulau }}">Edit</a>
-      <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ results.[0].id }} ">Delete</a>
-    </div>
+        <div class="provinsi">
+          <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ results.[0].id }}" data-nama="{{ results.[0].nama }}" data-diresmikan="{{ results.[0].diresmikan }}" data-photo="{{ results.[0].photo }}" data-pulau="{{ results.[0].pulau }}">Edit</a>
+          <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ results.[0].id }} ">Delete</a>
+        </div>
+      </div>
     <div class="container">
           {{#each results}}
       <div id="isi" class="card col-sm-5">
@@ -102,11 +112,14 @@ button.btn.btn-primary {
   </div>
     {{/each}}
     </div>
+    <div class="container">
+      <div class="card col-sm-12">
+        <a id="kembali" href="/">Kembali</a>
+      </div>
+    </div>
 </div>
 
-<div class="container">
-<a id="kembali" href="/">Kembali</a>
-  </div>
+
 
  <!-- Modal Update provinsi-->
 
