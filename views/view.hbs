@@ -32,8 +32,9 @@
       }
 
       button#dropdownMenuButton {
-          width: 40%;
-          
+          width: 30%;
+          margin: 0px 35%;
+          font-size: 100%;
       }
       body {
           background-color: #000000;
@@ -56,14 +57,13 @@
       }
       .navbar h1 {
         text-align: center;
-        font-size: 60px;
+        font-size: 400%;
         font-weight: 900;
       }
     .card{
-      padding: 20px;
-    margin-right: 30px;
-    border: solid 2px #006f89;
-    background-color: #000;
+      padding: 2%;
+      border: solid 2px #006f89;
+      background-color: #000;
     }
     .jawaban a {
     font-size: 150%;
@@ -94,24 +94,29 @@
 
         .card.col-sm {
             border: none;
+            padding: 0;
+            margin: 2%;
         }
         
         .card.col-sm-2 {
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin: 4%;
         }
 
         a#tombol-kabupaten {
-            margin-left: 43%;
-            margin-right: 43%;
-            margin-bottom: 20px;
+        }
+
+        a.navbar {
+            padding: 0;
+            margin: 0;
+            width: 100%;
         }
 
         .card.col-sm-3 {
-            margin-left: 35px;
+            margin: 2% 4%;
             text-align: center;
             border: none;
+            padding: 0;
         }
 
         .h3, h3 {
@@ -158,9 +163,6 @@ select option{
     margin: 0px;
 }
 
-.card.col-sm-2 {
-    text-align: center;
-}
 .bg-light#atas {
     background-color: black;
 }
@@ -169,13 +171,13 @@ select option{
 </head>
 <body>
 
-    <div class="container">
-    <a class="navbar" href="#">
+  <div class="container">
+    <a class="navbar" href="/">
       <div class="container">
       <h1>Provinsi & Kabupaten</h1>
       </div>
       
-      <div class="card col-sm">
+    <div class="card col-sm">
      <button class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">Add Provinsi</button>
       </div>
       <div class="card col-sm">
@@ -183,18 +185,18 @@ select option{
      </div>
      
 
-    <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown button
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-  </div>
+      <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
     </div>
      
-    </div>
+  </div>
   <div class="container jawaban">
     <div class="card col-sm-3">
       <a href='/provinsi_tb'>Jawaban untuk no 4 A</a>
@@ -294,15 +296,16 @@ select option{
          </div>
         </div>
      </form>
-        
+    <div class="card col-sm">        
+      <a id="tombol-kabupaten"class="btn btn-success" href="/kabupaten-first"><button class="btn">Lihat Seluruh Kabupaten</button></a>
+    </div> 
   </div>
-        
-  </div>
+  
   
  
 <script src="/assets/js/jquery-3.3.1.js"></script>
 <script src="/assets/js/bootstrap.js"></script>
 
- <a id="tombol-kabupaten"class="btn btn-success" href="/kabupaten-first"><button class="btn">Lihat Seluruh Kabupaten</button></a>
+
 </body>
 </html>

@@ -11,7 +11,7 @@
 {{!-- css styling --}}
 <style>
 h1 {
-    font-size: 7em;
+    font-size: 300%;
     text-align: center;
     font-family: fantasy;
 }
@@ -20,25 +20,28 @@ a.btn.btn-sm.btn-info.edit {
     margin-right: 10%;
     margin-left: 10%;
     float:left;
-    font-size: 2em;
+    font-size: 100%;
 }
 a.btn.btn-sm.btn-danger.delete {
     width: 30%;
     margin-right: 10%;
     margin-left: 10%;
     float: right;
-    font-size: 2em;
+    font-size: 100%;
 }
 
 #kembali {
-    margin-left: 41%;
+    width: 25%;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    margin: 2% 38%;
     border: solid 2px green;
-    margin-right: 41%;
-    font-size: 4em;
+    /* margin-right: 41%; */
+    font-size: 100%;
     background: aquamarine;
 }
 img {
-    width: 50em;
+    width: 60%;
     margin-left: 19%;
 }
 div#edit-delete {
@@ -49,6 +52,7 @@ div#edit-delete {
 <div class="container" id="content1">
   <div id="isi" class="container">
       {{#each results2}}
+      <div id="isi" class="card col-sm-12">
     <h1>{{ Nama }}</h1>
     <h1>{{Diresmikan}}</h1>
     <h1>{{Provinsi_id}}</h1>
@@ -56,13 +60,16 @@ div#edit-delete {
 <div id="edit-delete">
     <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ id }}" data-nama="{{ Nama }}" data-diresmikan="{{ Diresmikan }}" data-photo="{{ photo }}" data-provinsi_id="{{ Provinsi_id }}">Edit</a>
       <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ id }} ">Delete</a>
-    </div>
+        </div>
+      </div>
   </div>
       {{/each}}
 </div>
 
 <div class="container">
-<a id="kembali" href="/kabupaten-first">Kembali</a>
+      <div id="isi" class="card col-sm">
+<a id="kembali" href="/kabupaten-first" class="btn btn-sm btn-info edit">Kembali</a>
+      </div>
   </div>
 
  <!-- Modal Update kabupaten-->
